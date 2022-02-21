@@ -101,9 +101,9 @@ analytics:
 
 # Site Author
 author:
-  name: "레인 @ Lein"
+  name: "Lein"
   avatar: # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio: "레인의 프로그래밍 블로그입니다."
+  bio: "Lein의 프로그래밍 블로그입니다."
   # location         : "Somewhere"
   email:
   links:
