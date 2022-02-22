@@ -27,7 +27,7 @@ body {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .initial-content,
@@ -62,6 +62,7 @@ body {
       float: left;
       margin-left: 0;
       margin-right: 0;
+      margin-top: 1.25em;
       width: 100%;
       clear: both;
     }
@@ -93,22 +94,27 @@ body {
     border-bottom: 1px solid $border-color;
   }
 
-	h1, h2, h3, h4, h5, h6 {
-		.header-link {
-			position: relative;
-			left: 0.5em;
-			opacity: 0;
-			font-size: 0.8em;
-			-webkit-transition: opacity 0.2s ease-in-out 0.1s;
-			-moz-transition: opacity 0.2s ease-in-out 0.1s;
-			-o-transition: opacity 0.2s ease-in-out 0.1s;
-			transition: opacity 0.2s ease-in-out 0.1s;
-		}
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    .header-link {
+      position: relative;
+      left: 0.5em;
+      opacity: 0;
+      font-size: 0.8em;
+      -webkit-transition: opacity 0.2s ease-in-out 0.1s;
+      -moz-transition: opacity 0.2s ease-in-out 0.1s;
+      -o-transition: opacity 0.2s ease-in-out 0.1s;
+      transition: opacity 0.2s ease-in-out 0.1s;
+    }
 
-		&:hover .header-link {
-			opacity: 1;
-		}
-	}
+    &:hover .header-link {
+      opacity: 1;
+    }
+  }
 
   p,
   li,
@@ -313,6 +319,21 @@ body {
 /*
    Page taxonomy
    ========================================================================== */
+/* Lein's custom design */
+.post__taxonomy {
+  a {
+    color: $custom-color;
+    padding: 5px 5px;
+    margin-bottom: 8px;
+    margin-right: 5px;
+    background-color: rgb(63, 61, 58);
+  }
+
+  a:hover {
+    text-decoration: none;
+    color: $text-color;
+  }
+}
 
 .page__taxonomy {
   .sep {
@@ -322,13 +343,23 @@ body {
   strong {
     margin-right: 10px;
   }
+
+  a {
+    color: $link-color;
+    padding: 5px 5px;
+    background-color: rgb(63, 61, 58);
+  }
+}
+
+.page__date {
+  font-size: small;
 }
 
 .page__taxonomy-item {
   display: inline-block;
-  margin-right: 5px;
-  margin-bottom: 8px;
-  padding: 5px 10px;
+  margin-right: 1px;
+  margin-bottom: 1px;
+  padding: 1px 1px;
   text-decoration: none;
   border: 1px solid mix(#000, $border-color, 25%);
   border-radius: $border-radius;

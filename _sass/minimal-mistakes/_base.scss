@@ -126,6 +126,8 @@ blockquote {
 /* links */
 
 a {
+  text-decoration: none;
+
   &:focus {
     @extend %tab-focus;
   }
@@ -137,6 +139,14 @@ a {
   &:hover {
     color: $link-color-hover;
     outline: 0;
+  }
+}
+
+/* lein's custom design */
+
+h1.page__title {
+  a {
+    color: $link-color;
   }
 }
 

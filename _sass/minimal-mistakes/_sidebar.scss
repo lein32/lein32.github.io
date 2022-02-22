@@ -85,8 +85,8 @@
 
     &.sticky {
       @include clearfix();
-      position: -webkit-sticky;
-      position: sticky;
+      /*position: -webkit-sticky; 책갈피 고정 제거 */
+      /*position: sticky;*/
       top: 2em;
       float: right;
 
@@ -216,7 +216,7 @@
 
     &:before {
       @supports (pointer-events: none) {
-        content: '';
+        content: "";
         position: fixed;
         top: 0;
         left: 0;
@@ -350,4 +350,3 @@
     margin-right: initial;
   }
 }
-
