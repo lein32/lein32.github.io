@@ -8,5 +8,5 @@ sidebar_main: true
 
 ---
 
-{% assign posts = site.categories.Programmers %}
+{% assign posts = site.categories.programmers %}
 {% for post in posts %} {% include archive-single-custom.html type=page.entries_layout %} {% endfor %}
