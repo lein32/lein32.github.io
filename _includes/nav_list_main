@@ -12,7 +12,23 @@
       </li>
       <li>
         <!--span 태그로 카테고리들을 크게 분류 ex) C/C++/C#-->
-        <span class="nav__sub-title">C++</span>
+        <span class="nav__sub-title">Article</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "doodle" %}
+                        <li><a href="/categories/doodle" class="">Doodle ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "project" %}
+                        <li><a href="/categories/project" class="">Project ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        <span class="nav__sub-title">Language</span>
+
             <!--ul 태그로 같은 카테고리들 모아둔 페이지들 나열-->
             <ul>
                 <!--Cpp 카테고리 글들을 모아둔 페이지인 /categories/cpp 주소의 글로 링크 연결-->
@@ -25,23 +41,48 @@
             </ul>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "STL" %}
-                        <li><a href="/categories/stl" class="">C++ STL & 표준 ({{category[1].size}})</a></li>
+                    {% if category[0] == "csharp" %}
+                        <li><a href="/categories/stl" class="">C# ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
+
+        <span class="nav__sub-title">Graphics/Game Engine</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "unreal" %}
+                        <li><a href="/categories/unreal" class="">Unreal Engine ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "dx11" %}
+                        <li><a href="/categories/dx11" class="">DirectX11 ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "glsl" %}
+                        <li><a href="/categories/glsl" class="">GLSL ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+
+
         <span class="nav__sub-title">Problem Solving</span>
-                    <ul>
+            <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "boj" %}
-                        <li><a href="/categories/boj" class="">백준 ({{category[1].size}})</a></li>
+                        <li><a href="/categories/boj" class="">BOJ ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "programmers" %}
-                        <li><a href="/categories/programmers" class="">프로그래머스 ({{category[1].size}})</a></li>
+                        <li><a href="/categories/programmers" class="">Programmers ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
