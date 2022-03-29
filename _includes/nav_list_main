@@ -47,6 +47,36 @@
                 {% endfor %}
             </ul>
 
+        <span class="nav__sub-title">Tip & Reference</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "cpptip" %}
+                        <li><a href="/categories/cpptip" class="">C++ ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "csharptip" %}
+                        <li><a href="/categories/csharptip" class="">C# ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "frontendtip" %}
+                        <li><a href="/categories/frontendtip" class="">Frontend ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "backendtip" %}
+                        <li><a href="/categories/backendtip" class="">Backend ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+
         <span class="nav__sub-title">Graphics/Game Engine</span>
             <ul>
                 {% for category in site.categories %}
