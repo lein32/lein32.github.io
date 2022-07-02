@@ -37,6 +37,13 @@
             </ul>
             <ul>
                 {% for category in site.categories %}
+                    {% if category[0] == "learncpp" %}
+                        <li><a href="/categories/learncpp" class="">Learn C++ ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
                     {% if category[0] == "csharp" %}
                         <li><a href="/categories/stl" class="">C# ({{category[1].size}})</a></li>
                     {% endif %}
